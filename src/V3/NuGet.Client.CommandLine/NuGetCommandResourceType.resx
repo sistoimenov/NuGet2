@@ -412,6 +412,9 @@ nuget spec -a MyAssembly.dll</value>
   <data name="UpdateCommandPrerelease" xml:space="preserve">
     <value>Allows updating to prerelease versions. This flag is not required when updating prerelease packages that are already installed.</value>
   </data>
+	<data name="UpdateCommandVersion" xml:space="preserve">
+    <value>Update to specific version</value>
+  </data>
   <data name="UpdateCommandRepositoryPathDescription" xml:space="preserve">
     <value>Path to the local packages folder (location where packages are installed).</value>
   </data>

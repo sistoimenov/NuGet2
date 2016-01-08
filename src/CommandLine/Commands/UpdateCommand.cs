@@ -42,6 +42,9 @@ namespace NuGet.Commands
         [Option(typeof(NuGetCommand), "UpdateCommandPrerelease")]
         public bool Prerelease { get; set; }
 
+		[Option(typeof(NuGetCommand), "UpdateCommandVersion")]
+        public string Version { get; set; }
+
         [Option(typeof(NuGetCommand), "UpdateCommandFileConflictAction")]
         public FileConflictAction FileConflictAction { get; set; }
 
@@ -328,7 +331,7 @@ namespace NuGet.Commands
             {
                 if (localRepository.Exists(package.Id))
                 {
-                    using (sourceRepository.StartOperation(RepositoryOperationNames.Update, package.Id, mainPackageVersion: null))
+                    using (sourceRepository.StartOperation(RepositoryOperationNames.Update, package.Id, mainPackageVersion: Version))
                     {
                         try
                         {
